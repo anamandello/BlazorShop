@@ -1,0 +1,20 @@
+﻿@page "/categories/create"
+
+<h1>Nova Categoria</h1>
+<EditForm Model="@Model">
+	<div class="mb-3">
+		<label class="form-label">Nome da categoria</label>
+		<InputText @bind-Value="Model.Title" class="form-control"/>
+	</div>
+	<button type="submit" class="btn btn-primary">Criar</button>
+	<a href="/categories">Cancel</a>
+</EditForm>
+
+@code {
+	public Category Model { get; set; } = new();
+
+	protected override void OnInitialized()
+	{
+		
+	}
+}
