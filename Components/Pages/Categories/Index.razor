@@ -35,6 +35,14 @@ else
 							Editar
 						</a>
 						&nbsp;&nbsp;
+						@* <AuthorizeView>
+							@if (context.User.IsInRole("admin"))
+							{
+								<a href="/categories/delete/@category.Id" class="btn btn-danger">
+									Excluir
+								</a>
+							}
+						</AuthorizeView> *@
 						<a href="/categories/delete/@category.Id" class="btn btn-danger">
 							Excluir
 						</a>
